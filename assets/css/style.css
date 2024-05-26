@@ -88,7 +88,7 @@ ion-icon {
 .Navcontainer {
   width: 100%;;
   padding:15px;
-  position: fixed;
+  position: absolute;
   background-color: white;
   z-index: 10;
 }
@@ -119,6 +119,7 @@ nav .links {
 }
 
 .links .icon {
+  z-index: 20;
   position: relative;
 }
 
@@ -130,7 +131,7 @@ nav .links {
 }
 
 .menuOpt {
-  z-index: 1000;
+  z-index: 50;
   position: absolute;
   width: 100%;
   background-color: var(--white);

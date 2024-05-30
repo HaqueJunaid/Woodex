@@ -90,8 +90,9 @@ ion-icon {
 }
 
 .Navcontainer {
-  width: 100%;;
-  padding:15px;
+  width: 100%;
+  ;
+  padding: 15px;
   position: absolute;
   background-color: white;
   z-index: 10;
@@ -272,7 +273,7 @@ nav .links {
 
 .homeSection {
   width: 100%;
-  padding:10px 15px;
+  padding: 10px 15px;
   margin-top: calc(var(--section-padding) + 10px);
 }
 
@@ -328,7 +329,7 @@ nav .links {
   color: var(--tan-crayola);
 }
 
-.card:hover .imageSection img{
+.card:hover .imageSection img {
   transform: scale(1.05);
 }
 
@@ -651,8 +652,7 @@ nav .links {
 
 .newsSection {
   width: 100%;
-  padding: 1.5rem 25px;
-  background-color: var(--manatee);
+  padding: 1rem 25px;
 }
 
 .newsContainer {
@@ -661,6 +661,8 @@ nav .links {
   position: relative;
   display: flex;
   flex-direction: column;
+  background-color: var(--manatee);
+  padding: 1rem;
 }
 
 .newsContainer .text {
@@ -755,13 +757,13 @@ footer {
   margin-bottom: 10px;
 }
 
-.social a ion-icon{
+.social a ion-icon {
   font-size: 20px;
   color: var(--black_70);
   transition: var(--transition-1);
 }
 
-.social a:hover ion-icon{
+.social a:hover ion-icon {
   color: var(--tan-crayola);
 }
 
@@ -869,4 +871,301 @@ footer {
   font-size: var(--fs-5);
   color: var(--white);
   font-weight: 900;
+}
+
+@media (min-width: 900px) {
+  .header {
+    padding: 1.5rem 5rem;
+    width: 100%;
+  }
+
+  .header .Navcontainer {
+    width: 100%;
+    position: relative;
+    padding: 0;
+  }
+
+  .Navcontainer nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+  }
+
+  nav .inputSection {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.5rem 0.8rem;
+    border: 1px solid var(--black_50);
+    border-radius: 5px;
+  }
+
+  .inputSection input {
+    font-size: 15px;
+  }
+
+  .inputSection ion-icon {
+    color: var(--black_70);
+  }
+
+  nav .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  nav .links {
+    gap: 0.8rem;
+    align-items: center;
+  }
+
+  .header .menuOpt {
+    width: 30%;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+  }
+
+  .homeSection {
+    width: 100%;
+    padding: 2rem 5rem;
+    margin: 0;
+  }
+
+  .homeContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 2rem;
+  }
+
+  .homeContainer .card {
+    height: 40vh;
+  }
+
+  .homeContainer .card .imageSection {
+    width: 100%;
+    height: 100%;
+  }
+
+  .homeContainer .card .imageSection img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .homeContainer .stretch {
+    grid-column: span 2;
+  }
+
+  .homeContainer .card .text {
+    left: 2rem;
+    top: 2rem;
+  }
+
+  .card .text h3 {
+    font-size: var(--fs-5);
+  }
+
+  .aboutSection {
+    width: 100%;
+    position: relative;
+    padding: 3rem 5rem;
+    height: fit-content;
+  }
+
+  .aboutContainer {
+    height: fit-content;
+    width: 100%;
+    position: relative;
+  }
+
+  .aboutContainer .aboutText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 3rem;
+  }
+
+  .aboutContainer .aboutText h2 {
+    font-size: 6rem;
+  }
+
+  .aboutText p {
+    font-size: 20px;
+    width: 50%;
+  }
+
+  .aboutBanner {
+    width: 100%;
+    height: 30rem;
+    overflow: hidden;
+  }
+
+  .aboutBanner .imageAbout {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .imageAbout .overlay {
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .imageAbout img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .imageAbout .play-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .play-btn ion-icon {
+    font-size: 5rem;
+  }
+
+  .productsSection {
+    padding: 3rem 5rem;
+    width: 100%;
+    position: relative;
+  }
+
+  .productsSection .productsContainer {
+    width: 100%;
+  }
+
+  .productsContainer .upperSection .heading h1{
+    font-size: var(--fs-2);
+  }
+
+  .types span {
+    padding: 0 1rem;
+    font-size: var(--fs-6);
+  }
+
+  .productsContainer .lowerSection .products{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 3rem;
+  }
+
+  .product .imageDiv {
+    width: 100%;
+    height: 30rem;
+    margin-bottom: 1rem;
+  }  
+
+  .product .imageDiv img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .productsContainer .lowerSection .products .text h1 {
+    font-size: var(--fs-4);
+    color: var(--smokey-black);
+  }
+
+  .productsContainer .lowerSection .products .text p {
+    font-size: var(--fs-5);
+  }
+
+  .blogSection {
+    width: 100%;
+    padding: 5rem;
+    height: fit-content;
+  }
+
+  .blogSection .blogContainer {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .blogContainer .blogHading h1 {
+    font-size: var(--fs-2);
+    margin-bottom: 1rem;
+  }
+
+  .blogContainer .blogHading p {
+    font-size: var(--fs-6);
+  }
+
+  .blogContainer .blogs {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .blogs .blog .ig {
+    width: 100%;
+    height: 20rem;
+    border-radius: 10px;
+  }
+
+  .blogs .blog .content h4 {
+    font-size: var(--fs-5);
+  }
+
+  .content p {
+    font-size: 18px;
+  }
+
+  .newsSection {
+    width: 100%;
+    padding: 2rem 15rem;
+  }
+
+  .newsSection .newsContainer {
+    padding: 3rem;
+    width: 100%;
+  }
+
+  .newsContainer .text h1 {
+    font-size: var(--fs-2);
+  }
+
+  .newsContainer .text p {
+    font-size: var(--fs-6);
+  }
+  
+  footer {
+    width: 100%;
+    padding: 3rem 5rem;
+  }
+
+  .footerContainer {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+  }
+
+  .footerContainer .terms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .backToTop {
+    width: 3rem;
+    height: 3rem;
+    right: 3rem;
+    bottom: 2.5rem;
+  }
 }
